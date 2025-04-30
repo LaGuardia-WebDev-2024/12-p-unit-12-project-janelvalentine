@@ -9,10 +9,9 @@ Select ONE Additional
 [ no ] Feature 1 - Use .addClass() method
 [ no ] Feature 2 - Use a variable in javaScript 
 [ no ] Feature 3 - Use .mouseover() method
-[ no ] Feature 4 - Use .show() method
+[ yes ] Feature 4 - Use .show() method
 [ no ] Feature 5 - Use .append() method
 -->
-
 
 <!DOCTYPE html>
 <html>
@@ -21,42 +20,97 @@ Select ONE Additional
     <title>Unit 12 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+  <style>
+    body {
+      background-color: rgb(149, 194, 140);
+    }
+    .photo {
+      width: 200px;
+      margin: 20px;
+      border: 5px solid rgb(106, 153, 146);
+      padding: 5px;
+    }
+    #mem1-button {
+      background-color: purple;
+      border: none;
+    }
+  </style>
   <body>
-    <button id="mem1-button">Memory #1</button>
+    <button id="mem1-button"><strong>Memory #1</strong></button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
-    <ol>
-      <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
-      </li>
+    <center>
+      <h1>My Top 3 Memories of <span>This Year</span></h1>
+      <ol>
+        <li>
+          <h3 id="mem1">My BIRTHDAYYYYY</h3>
 
-      <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
-      </li>
+          <p>
+            3/5<br />
+            The Worlds favorite Holiday
+          </p>
+          <p class= "me">
+            ME ME ME
+          </p>
 
-      <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
-      </li>
-    </ol>
+          <img
+            id="pisces"
+            class="photo"
+            src="https://cdn.glitch.global/909057e8-c1e3-4f5a-b9e7-b785811aa99b/birthday?v=1745422447619"
+            width="200"
+            style="display: none"
+          />
+        </li>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
-      });
+        <li>
+          <h3 id="mem2">Weekend with Nicholette</h3>
+          <p>Poconos</p>
+          <img
+            id="snow"
+            class="photo"
+            src="https://cdn.glitch.global/909057e8-c1e3-4f5a-b9e7-b785811aa99b/IMG_8855.JPG?v=1745422424329"
+            width="200"
+            style="display: none"
+          />
+        </li>
 
-      $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
-      });
+        <li>
+          <h3 id="mem3">Senior ART Show</h3>
+          <p class= "me">
+            ME ME ME
+          </p>
+          <p>Most of my paintings</p>
+           
+          <img
+            id="paint"
+            class="photo"
+            src="https://cdn.glitch.global/909057e8-c1e3-4f5a-b9e7-b785811aa99b/IMG_1585.PNG?v=1745425567727"
+            width="200"
+            style="display: none"
+          />
+        </li>
+      </ol>
 
-      $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
-      });
-    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script>
+        $("#mem1-button").click(function () {
+          $("#mem1").css("color", "purple");
+          $("#pisces").show(2000);
+        });
+
+        $("#mem2-button").click(function () {
+          $("#mem2").css("color", "blue");
+          $("#snow").show(2000);
+        });
+
+        $("#mem3-button").click(function () {
+          $("#mem3").css("color", "pink");
+          $("#paint").show(2000);
+        });
+        $("h1").text("TOP MEMORIES OF 2025");
+$(".me").text("ALL bout yours truly,")
+      </script>
+    </center>
   </body>
 </html>
 
